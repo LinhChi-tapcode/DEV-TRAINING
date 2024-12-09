@@ -7,7 +7,6 @@ const students = [
 ];
 
 // In ra thông tin của mỗi sinh viên sử dụng vòng lặp for...of
-console.log('for...of:');
 for (let student of students) { 
    const name = student.name;
    const score = student.score;
