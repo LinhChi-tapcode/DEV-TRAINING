@@ -1,0 +1,248 @@
+*{
+margin:0; padding:0;
+box-sizing: border-box;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+outline: none; border:none;
+text-decoration: none;
+text-transform: capitalize;
+transition: .2s linearT;
+color: black;
+}
+
+html{
+    font-size: 55%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header{
+position: fixed;
+top:0; left:0; right:0;
+background: #fff;
+padding:2rem 9%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index: 1000;
+box-shadow: 0 .1rem rgba(0,0,0.1);
+}
+
+:root{
+    --red: #c9231f;
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #c9231f;
+    font-weight: bolder;
+}
+
+header .logo:hover{
+    color: #ffbf00;
+}
+header .logo span{
+    color:var(--red);
+}
+
+header  .navbar a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+}
+
+header  .navbar a:hover{
+    color: var(--red);
+}
+
+header  .icons a{
+    font-size: 3rem;
+    padding:0 1.5rem;
+    color: black;
+}
+
+header  .icons a:hover{
+    color: var(--red);
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://i.pinimg.com/736x/db/d0/56/dbd056b9db6ea88ca64f0379011aff26.jpg') center/cover no-repeat;
+    height: 50vh;
+    text-align: center;
+    color: #fff;
+}
+
+.banner p{
+    font-size: 12px;
+}
+.banner__title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.banner__button {
+    padding: 0.5rem 1rem;
+    background: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 3%;
+}
+
+.banner__button:hover {
+    background: darkred;
+}
+
+/*PRODUCTS*/
+
+.products {
+    position: relative;
+    padding: 2rem 5%;
+    background: url('https://i.pinimg.com/736x/11/1b/73/111b731504dad675b5fcd7e3bdffd020.jpg') center/cover no-repeat;
+    z-index: 1;
+}
+
+
+
+.products__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.products__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+
+.product {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    flex: 1 1 25%; 
+    max-width: 25%; 
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem; 
+    padding: 3.5px;
+}
+
+
+
+.product__image {
+    width: 100%;
+    height: 78%;
+    transition: transform 0.3s;
+}
+
+.product__image:hover {
+    transform: scale(1.1);
+}
+
+.product__name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    margin-bottom: 4px;
+    margin-top: 12px;
+}
+
+.product__price {
+    color: var(--red);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product__button {
+    padding: 0.5rem;
+    background: var(--red);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.product__button:hover {
+    background: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 100%;
+    }
+}
+
+.footer {
+    background: url('https://i.pinimg.com/736x/db/d0/56/dbd056b9db6ea88ca64f0379011aff26.jpg') center/cover no-repeat;
+    color: white;
+    padding: 2rem 5%;
+    font-size: 1.6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.footer__section {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+}
+
+.footer__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffbf00; 
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icons a {
+    color: var(--red);
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.icons a:hover {
+    color: #ffbf00;
+}
+
+.footer__contact p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .footer__section {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
